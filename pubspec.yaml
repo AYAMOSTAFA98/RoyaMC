@@ -52,8 +52,8 @@ dependencies:
   dio: 
 
   #Firebase
-  firebase_messaging:
-  firebase_core:
+  # firebase_messaging:
+  # firebase_core:
 
   #Connectivity
   connectivity_plus:
@@ -71,7 +71,7 @@ dependencies:
   #Utils
   fast_immutable_collections:
   flutter_fadein:
-  flutter_local_notifications: ^9.9.1
+  # flutter_local_notifications: ^9.9.1
   timezone:
   timeago:
   flutter_native_timezone_updated_gradle: 
