@@ -54,14 +54,14 @@ class AppointmentScreen extends ConsumerWidget {
                       const SizedBox(
                         height: Sizes.marginV55,
                       ),
-                      CustomText.f16(
+                      CustomText.f14(
                         context,
                         'Contact US',
                         color: AppStaticColors.white,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(
-                        height: Sizes.marginV8,
+                        height: Sizes.marginV5,
                       ),
                       CustomText.f9(
                         context,
@@ -70,7 +70,7 @@ class AppointmentScreen extends ConsumerWidget {
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(
-                        height: Sizes.marginV16,
+                        height: Sizes.marginV12,
                       ),
                       CustomTextFormField(
                         key: const ValueKey('login_name'),
@@ -83,7 +83,7 @@ class AppointmentScreen extends ConsumerWidget {
                         },
                       ),
                       const SizedBox(
-                        height: Sizes.marginV8,
+                        height: Sizes.marginV6,
                       ),
                       CustomTextFormField(
                         key: const ValueKey('login_email'),
@@ -97,7 +97,7 @@ class AppointmentScreen extends ConsumerWidget {
                         },
                       ),
                       const SizedBox(
-                        height: Sizes.marginV8,
+                        height: Sizes.marginV6,
                       ),
                       CustomTextFormField(
                         key: const ValueKey('login_phone'),
@@ -111,7 +111,7 @@ class AppointmentScreen extends ConsumerWidget {
                         },
                       ),
                       const SizedBox(
-                        height: Sizes.marginV8,
+                        height: Sizes.marginV6,
                       ),
                       CustomTextFormField(
                         key: const ValueKey('login_department'),
@@ -125,7 +125,7 @@ class AppointmentScreen extends ConsumerWidget {
                         },
                       ),
                       const SizedBox(
-                        height: Sizes.marginV8,
+                        height: Sizes.marginV6,
                       ),
                       CustomTextFormField(
                         key: const ValueKey('login_email'),
@@ -139,7 +139,7 @@ class AppointmentScreen extends ConsumerWidget {
                         },
                       ),
                       const SizedBox(
-                        height: Sizes.marginV28,
+                        height: Sizes.marginV20,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
@@ -147,7 +147,7 @@ class AppointmentScreen extends ConsumerWidget {
                         child: CustomButton(
                           onPressed: () async{
                            await contactNotifier.postContact();
-                            ref.read(bottomNavIndexProvider.state).state = 0;
+                            ref.read(bottomNavIndexProvider.notifier).state = 0;
                             // ignore: use_build_context_synchronously
                             Navigator.pushReplacement(
                               context,

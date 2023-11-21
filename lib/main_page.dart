@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
@@ -48,39 +46,65 @@ class MainPage extends ConsumerWidget {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(AppImages.bottomNavImage1,
-                color: AppStaticColors.greyShadow, height: 24, width: 24),
+                colorFilter: const ColorFilter.mode(
+                    AppStaticColors.greyShadow, BlendMode.dst),
+                height: 24,
+                width: 24),
             label: 'Home',
             activeIcon: SvgPicture.asset(AppImages.bottomNavImage1,
-                color: Theme.of(context).primaryColor, height: 24, width: 24),
+                colorFilter: ColorFilter.mode(
+                    Theme.of(context).primaryColor, BlendMode.srcATop),
+                height: 24,
+                width: 24),
             backgroundColor: AppStaticColors.white,
           ),
           BottomNavigationBarItem(
             backgroundColor: AppStaticColors.white,
             icon: SvgPicture.asset(AppImages.bottomNavImage2,
-                color: AppStaticColors.greyShadow, height: 24, width: 24),
+                colorFilter: const ColorFilter.mode(
+                    AppStaticColors.greyShadow, BlendMode.dst),
+                height: 24,
+                width: 24),
             activeIcon: SvgPicture.asset(AppImages.bottomNavImage2,
-                color: Theme.of(context).primaryColor, height: 24, width: 24),
+                colorFilter: ColorFilter.mode(
+                    Theme.of(context).primaryColor, BlendMode.srcATop),
+                height: 24,
+                width: 24),
             label: 'Prices',
           ),
           BottomNavigationBarItem(
             backgroundColor: AppStaticColors.white,
             icon: SvgPicture.asset(AppImages.bottomNavImage3,
-                color: AppStaticColors.greyShadow, height: 24, width: 24),
+                colorFilter: const ColorFilter.mode(
+                    AppStaticColors.greyShadow, BlendMode.dst),
+                height: 24,
+                width: 24),
             activeIcon: SvgPicture.asset(AppImages.bottomNavImage3,
-                color: Theme.of(context).primaryColor, height: 24, width: 24),
+                colorFilter: ColorFilter.mode(
+                    Theme.of(context).primaryColor, BlendMode.srcATop),
+                height: 24,
+                width: 24),
             label: 'Departments',
           ),
           BottomNavigationBarItem(
             backgroundColor: AppStaticColors.white,
             icon: SvgPicture.asset(AppImages.bottomNavImage4,
-                color: AppStaticColors.greyShadow, height: 24, width: 24),
+                colorFilter: const ColorFilter.mode(
+                    AppStaticColors.greyShadow, BlendMode.dst),
+                // color: AppStaticColors.greyShadow,
+                height: 24,
+                width: 24),
             activeIcon: SvgPicture.asset(AppImages.bottomNavImage4,
-                color: Theme.of(context).primaryColor, height: 24, width: 24),
+                colorFilter: ColorFilter.mode(
+                    Theme.of(context).primaryColor, BlendMode.srcATop),
+                //color: Theme.of(context).primaryColor,
+                height: 24,
+                width: 24),
             label: 'Book',
           )
         ],
         itemChanged: (v) {
-          ref.read(bottomNavIndexProvider.state).state = v;
+          ref.read(bottomNavIndexProvider.notifier).state = v;
         },
         currentIndex: indx ?? bottomNavIndex,
         material3: (_, __) {
@@ -131,11 +155,11 @@ class MainPage extends ConsumerWidget {
 }
 
 void sendWhatsApp() {
-  String url = 'whatsapp://send?+971544426622';
+  String url = 'https://api.whatsapp.com/send?phone=+971544426622';
   launchUrl(Uri.parse(url));
 }
 
 void phoneCall() {
   String url = 'tel://+971544426622';
-  launch(url);
+  launchUrl(Uri.parse(url));
 }

@@ -1,4 +1,4 @@
-package com.example.roya_center
+package com.adsamy.roya_center
 
 import io.flutter.embedding.android.FlutterActivity
 

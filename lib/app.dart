@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Roya Center', 
+      title: 'RoyaMC', 
       theme: ThemeLight().getThemeData(),
       home: const SplashScreen(),
     );

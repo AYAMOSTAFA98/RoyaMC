@@ -5,11 +5,11 @@ class AppImages {
   
 
   /// Splash Screen + OnBoarding
-  static const String splash = '${imagesPath}1.jpg';
+  static const String splashLogo = '${imagesPath}splashlogo.png';
   static const String welcomeImage = '${imagesPath}main.webp.jpg';
-  static const String onboarding1 = '${imagesPath}Image.png';
-  static const String onboarding2 = '${imagesPath}Image1.png';
-  static const String onboarding3 = '${imagesPath}Image2.png';
+  static const String onboarding1 = '${imagesPath}Image.jpg';
+  static const String onboarding2 = '${imagesPath}Image1.jpg';
+  static const String onboarding3 = '${imagesPath}Image2.jpg';
   /// Nav
   static const String bottomNavImage1 = '${imagesPath}Home.svg';
   static const String bottomNavImage2 = '${imagesPath}Layer_1.svg';
@@ -24,6 +24,7 @@ class AppImages {
   static const String searchImage = '${imagesPath}Search.png';
   static const String contactImage1 = '${imagesPath}whatsapp.png';
   static const String contactImage2 = '${imagesPath}phone-call.png';
+  static const String drawerImage = '${imagesPath}XMLID_101_.svg';
   /// department
   static const String departmentImage1 = '${imagesPath}department1.png';
   static const String departmentImage2 = '${imagesPath}department2.png';

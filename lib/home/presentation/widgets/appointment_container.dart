@@ -41,7 +41,7 @@ class AppointmentContainer extends ConsumerWidget {
                 ),
                 CustomButton(
                   onPressed: () {
-                    ref.read(bottomNavIndexProvider.state).state = 3;
+                    ref.read(bottomNavIndexProvider.notifier).state = 3;
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

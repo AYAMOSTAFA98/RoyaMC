@@ -46,7 +46,7 @@ class WelcomeItem extends StatelessWidget {
                       Scaffold.of(context).openDrawer();
                     },
                     child: SvgPicture.asset(
-                      AppImages.bottomNavImage4,
+                      AppImages.drawerImage,
                       color: Theme.of(context).primaryColor,
                       width: 25,
                       fit: BoxFit.fill,

@@ -33,8 +33,8 @@ class _OnbordingState extends State<Onbording> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const EmptyAppBar(
-                  statusBarColor:  Color(0xFFFFFFFF),
-                ),
+        statusBarColor: Color(0xFFFFFFFF),
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: PageView.builder(
@@ -58,11 +58,9 @@ class _OnbordingState extends State<Onbording> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      contents[i].discription,
-                      textAlign: TextAlign.start,
-                      style: FontStyles.onboardingFontStyle(context)
-                    ),
+                    Text(contents[i].discription,
+                        textAlign: TextAlign.start,
+                        style: FontStyles.onboardingFontStyle(context)),
                     const SizedBox(height: Sizes.marginH30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -92,16 +90,18 @@ class _OnbordingState extends State<Onbording> {
                           child: CircleAvatar(
                               radius: Sizes.buttonR25,
                               backgroundColor: Theme.of(context).primaryColor,
-                              child: const Icon(Icons.arrow_forward,size: Sizes.icon30,)
+                              child: const Icon(
+                                Icons.arrow_forward,
+                                size: Sizes.icon30,
+                              )
                               // Text(currentIndex == contents.length - 1
                               //     ? "Continue"
                               //     : "Next"),
                               ),
                         ),
-                        
                       ],
                     ),
-                    const SizedBox(height: Sizes.marginV62),
+                     SizedBox(height: i == 2 ?Sizes.marginV44:Sizes.marginV62),
                   ],
                 ),
               ],
