@@ -31,6 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: EmptyAppBar(
         statusBarColor: Theme.of(context).primaryColor,
         systemOverlayStyle: SystemUiOverlayStyle(

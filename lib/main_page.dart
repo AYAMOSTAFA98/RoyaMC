@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:roya_center/core/core_features/theme/presentation/utils/colors/app_static_colors.dart';
+import 'package:roya_center/core/data/error/app_exception.dart';
 import 'package:roya_center/core/presentation/styles/app_images.dart';
 import 'package:roya_center/core/presentation/styles/sizes.dart';
 import 'package:roya_center/prices/presentation/screens/Prices_screen.dart';
@@ -154,9 +157,17 @@ class MainPage extends ConsumerWidget {
   }
 }
 
-void sendWhatsApp() {
-  String url = 'https://api.whatsapp.com/send?phone=+971544426622';
-  launchUrl(Uri.parse(url));
+void sendWhatsApp() async {
+  String url = Platform.isAndroid
+      ? 'whatsapp://send?phone=+971544426622'
+      : 'https://wa.me/+971544426622';
+  final uri = Uri.parse(url);
+  await canLaunchUrl(uri)
+      ? launchUrl(uri)
+      : throw const CacheException(
+          type: CacheExceptionType.general,
+          message: "Couldn't launch app.",
+        );
 }
 
 void phoneCall() {
