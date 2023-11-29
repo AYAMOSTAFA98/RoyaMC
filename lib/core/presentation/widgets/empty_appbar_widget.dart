@@ -23,6 +23,7 @@ class EmptyAppBar extends StatelessWidget
       systemOverlayStyle: systemOverlayStyle ??
           Theme.of(context).appBarTheme.systemOverlayStyle?.copyWith(
               statusBarColor: statusBarColor,
+              
               systemNavigationBarColor: Colors.transparent),
       elevation: elevation ?? Theme.of(context).appBarTheme.elevation,
     );
