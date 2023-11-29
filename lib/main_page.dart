@@ -155,7 +155,7 @@ class MainPage extends ConsumerWidget {
 }
 
 void sendWhatsApp() {
-  String url = 'https://api.whatsapp.com/send?phone=+971544426622';
+  String url = 'whatsapp.com/send?phone=+971544426622';
   launchUrl(Uri.parse(url));
 }
 
